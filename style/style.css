@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --bg-color: white;
     --bg-result: hsl(241, 81%, 54%);
@@ -13,7 +15,6 @@
     --visual-color: hsl(234, 85%, 45%);
     --bg-visual-color: hsla(234, 85%, 45%, 0.096);
 }
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
@@ -21,14 +22,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Hanken Grotesk', sans-serif;
 }
 
 body {
+    font-family: "Hanken Grotesk", sans-serif;
     background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    font-size: 18px;
 }
 
 .container {
@@ -43,9 +45,8 @@ body {
     border-bottom-right-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    text-align: center;
     padding: 50px;
     gap: 15px;
     width: 100vw;
@@ -53,8 +54,8 @@ body {
 }
 
 #resultado h3 {
-    font-size: 18px;
-    color: hsla(222, 100%, 96%, 0.644);
+    font-size: 24px;
+    color: hsla(222, 100%, 96%, 0.829);
 }
 
 .circle {
@@ -132,6 +133,12 @@ article {
     font-weight: 700;
     
 }
+
+.icon {
+    display: flex;
+    gap: 10px;
+}
+
 .reaction {
     background-color: var(--bg-reaction-color);
     color: var(--reaction-color);
@@ -160,7 +167,7 @@ article {
 
 .continue button {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
     margin-top: 30px;
     cursor: pointer;
@@ -170,13 +177,23 @@ article {
     font-weight: 600;
     font-size: 22px;
     width: 90vw;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.349);
     
 }
 
-.continue button:hover {
-    background-color: hsl(221, 100%, 96%);
+.span {
     color: hsl(224, 30%, 27%);
-    text-decoration: underline;
+    font-weight: 700;
+}
+
+.span-2 {
+    color: hsl(241, 23%, 64%);
+    font-weight: 700;
+}
+
+.continue button:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
 @media only screen and (min-width: 700px) {
@@ -189,8 +206,8 @@ article {
     
     .container {
         flex-direction: row;
-        width: 700px;
-        height: 500px;
+        width: 740px;
+        height: 515px;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.164);
         border-radius: 20px;
     }
@@ -200,11 +217,23 @@ article {
         height: 100%;
         padding: 20px;
     }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+    
     .summary {
         width: 50%;
         border-radius: 20px;
     }
     .continue button {
         width: 100%;
+    }
+
+    .text-result {
+        width: 76%;
+        margin: auto;
+        font-size: 1.15rem;
     }
 }
